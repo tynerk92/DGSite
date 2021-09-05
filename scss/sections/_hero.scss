@@ -1,0 +1,14 @@
+.dg-hero {
+    padding: 213px 0;
+
+    h1 {
+        margin-bottom: 2rem;
+        line-height: clamp(56px, 3.889vw, 89px);
+        font-size: clamp(60px, 5.833vw, 120px);
+    }
+
+    p {
+        margin-bottom: 4rem;
+        font-size: clamp(20px, 1.667vw, 32px);
+    }
+}

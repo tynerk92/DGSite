@@ -1,0 +1,84 @@
+.dg-featured-work {
+
+    div[class^="featured-work-"] {
+        max-width: 1110px;
+        width: 1000%;
+        height: 212px;
+        margin-bottom: 36.5px;
+        overflow: hidden;
+    }
+
+    .overlay {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(var(--clr-black-rgb), 0);
+        transition: background-color 0.3s ease;
+        overflow: hidden;
+        z-index: 1;
+        position: relative;
+        padding: 38px 0 0 70px;
+
+        h2, p, a {
+            transition: left 0.3s ease;
+            position: relative;
+        }
+
+        h2 {
+            font-size: 84px;
+            line-height: 101px;
+            left: -350px;
+        }
+
+        p {
+            left: -700px;
+        }
+
+        a {
+            text-decoration: none;
+            left: -1400px;
+        }
+
+        .triangle {
+            width: 212px;
+            height: 250px;
+            background-color: var(--clr-primary);
+            position: absolute;
+            left: -212px;
+            bottom: 0;
+            transform-origin: bottom right;
+            z-index: 0;
+            transition: transform 0.3s ease;
+        }
+
+        &:hover {
+            background-color: rgba(var(--clr-black-rgb), 0.79);
+
+            .triangle {
+                transform: rotate(12deg);
+            }
+
+            h2, p, a {
+                left: 0px;
+            }
+        }
+    }
+
+    
+
+    .featured-work-1 {
+        background-image: url("../images/featured-work-1.png");
+        background-position-x: clamp(-610px, calc(-610px + 256.2721893491124 * ((100vw - 426px) / 426)), 0px);
+        background-repeat: no-repeat;
+    }
+
+    .featured-work-2 {
+        background-image: url("../images/featured-work-2.png");
+        background-position-x: clamp(-468px, calc(-468px + 196.6153846153846 * ((100vw - 426px) / 426)), 0px);
+        background-repeat: no-repeat;
+    }
+
+    .featured-work-3 {
+        background-image: url("../images/featured-work-3.png");
+        background-repeat: no-repeat;
+    }
+}

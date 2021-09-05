@@ -1,0 +1,27 @@
+{
+  "name": "dg-website",
+  "version": "1.0.0",
+  "description": "Initial draft of the DG Website",
+  "private": true,
+  "main": "public/index.html",
+  "scripts": {
+    "serve": "browser-sync start -s -f ./public ./public/styles --index ./public/index.html --host localhost --port 8080",
+    "css": "node-sass -w ./scss -r -o ./public/styles --linefeed lf"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tynerk92/DGSite.git"
+  },
+  "author": "Kylon Tyner",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tynerk92/DGSite/issues"
+  },
+  "homepage": "https://github.com/tynerk92/DGSite#readme",
+  "devDependencies": {
+    "node-sass": "^6.0.1"
+  },
+  "dependencies": {
+    "browser-sync": "^2.27.5"
+  }
+}

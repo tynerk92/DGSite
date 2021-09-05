@@ -1,0 +1,44 @@
+.dg-important {
+    color: var(--clr-primary);
+}
+
+// Bug with Firefox (maybe other browsers)
+// The clamp/calc does not work for all class="dg-container"
+// The browser needs a rule for each container on the page
+// Otherwise, it only calculates the very first instance
+.dg-container {
+    padding: 0 clamp(40px, calc(40px + 52.514792899408285 * ((100vw - 426px) / 426)), 165px);
+}
+
+.dg-container-2 {
+    padding: 0 clamp(40px, calc(40px + 52.514792899408285 * ((100vw - 426px) / 426)), 165px);
+}
+
+.dg-container-3 {
+    padding: 0 clamp(40px, calc(40px + 52.514792899408285 * ((100vw - 426px) / 426)), 165px);
+}
+
+.dg-container-4 {
+    padding: 0 clamp(40px, calc(40px + 52.514792899408285 * ((100vw - 426px) / 426)), 165px);
+}
+
+div[class^="dg-container-"] {
+    margin: 0 auto;
+    max-width: 1440px;
+}
+
+.dg-section-dark {
+    h1,h2,h3,h4,h5,h6,span,p {
+        color: var(--clr-white);
+    }
+
+    background-color: var(--clr-dark);
+}
+
+.dg-section-left {
+    max-width: clamp(623px, 43.264vw, 900px);
+}
+
+.dg-no-overflow {
+    overflow-x: hidden;
+}

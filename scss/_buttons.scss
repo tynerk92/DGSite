@@ -1,0 +1,30 @@
+.dg-button-wrap {
+    &.dg-primary {
+        filter: drop-shadow(0 0 0.5rem var(--clr-black));
+        .dg-button {
+            padding: 1rem 2.5rem 1rem 2rem;
+            clip-path: polygon(0 0, 100% 0, calc(100% - 1rem) 100%, 0 100%);
+        }
+    }
+
+    &.dg-secondary {
+        .dg-button {
+            padding: 1rem 2rem 1rem 2.5rem;
+            clip-path: polygon(1rem 0, 100% 0, 100% 100%, 0 100%);
+            background: #3B3B3F;
+            margin-left: -0.5rem;
+        }
+    }
+
+    .dg-button {
+        text-decoration: none;
+        font-family: "Neue Haas Grotesk Display", sans-serif;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: var(--clr-white);
+        background: linear-gradient(30deg, #FB8AAA, var(--clr-primary));
+        letter-spacing: 2px;
+        font-size: 14px;
+        line-height: 17px;
+    }
+}

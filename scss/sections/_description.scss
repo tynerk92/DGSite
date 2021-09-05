@@ -1,0 +1,14 @@
+.dg-description {
+    padding: 170px 0 300px;
+
+    h2 {
+        font-size: clamp(60px, 5.833vw, 120px);
+        line-height: clamp(56px, 5.556vw, 120px);
+        margin-bottom: 2rem;
+    }
+
+    p {
+        margin-bottom: 4rem;
+        font-size: clamp(20px, 1.667vw, 32px);
+    }
+}
