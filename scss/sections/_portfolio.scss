@@ -1,0 +1,13 @@
+.dg-portfolio {
+    padding-top:  clamp(55px, calc(55px + 67.2189349112426 * ((100vw - 426px) / 426)), 215px);
+    
+    .dg-portfolio-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(137.5px, 1fr));
+        gap: 70px;
+
+        img {
+            width: 100%;
+        }
+    }
+}

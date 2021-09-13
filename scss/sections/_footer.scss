@@ -1,0 +1,94 @@
+footer {
+    margin-top: clamp(69px, calc(69px + 35.710059171597635 * ((100vw - 426px) / 426)), 154px);
+
+    .dg-footer-content {
+        position: relative;
+        padding-top:  clamp(159px, calc(159px + 31.50887573964497 * ((100vw - 426px) / 426)), 234px);
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        row-gap: 58px;
+        padding-bottom: clamp(75px, calc(152px - 32.349112426035504 * ((100vw - 426px) / 426)), 152px);
+        
+        h2, h2 > span {
+            font-size: 36px;
+            line-height: 36px;
+            font-family: "Rama Gothic E", sans-serif;
+        }
+
+        .dg-action-words {
+            position: absolute;
+            right: 0;
+            top: 111px;
+
+            span {
+                font-family: "Neue Haas Grotesk Display", sans-serif;
+                text-transform: uppercase;
+                font-size: 12px;
+                letter-spacing: 2px;
+                color: #6E6E71;
+                font-weight: bold;
+
+                &:not(:last-child) {
+                    padding-right: 1rem;
+                }
+            }
+        }
+
+        .dg-copyright, .dg-socials {
+            justify-self: end;
+        }
+
+        .dg-socials {
+            img:not(:last-child) {
+                padding-right: 32px;
+            }
+        }
+
+        p {
+            font-family: "Neue Haas Grotesk Display", sans-serif;
+            font-size: 12px;
+            line-height: 25.7167px; // Same size as the designgum logo height
+            letter-spacing: 0.48px;
+            color: #6E6E71;
+        }
+
+        .dg-footer-logo {
+            display: flex;
+            align-items: center;
+
+            img, p {
+                display: inline-block;
+            }
+
+            img {
+                margin-right: 27px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 1030px) {
+        .dg-footer-content {
+            grid-template-columns: 1fr;
+            gap: 0;
+
+            .dg-copyright, .dg-socials {
+                justify-self: start;
+            }
+
+            .dg-socials {
+                margin: 80px 0;
+            }
+
+            .dg-footer-logo {
+                display: block;
+                img {
+                    display: block;
+                }
+            }
+
+            .dg-action-words {
+                display: none;
+            }
+        }
+    }
+}

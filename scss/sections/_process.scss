@@ -1,0 +1,56 @@
+.dg-process {
+    margin-right: clamp(40px, calc(40px + 88.22485207100591 * ((100vw - 426px) / 426)), 250px);
+    margin-top: clamp(102px, calc(102px + 23.94674556213018 * ((100vw - 426px) / 426)), 159px);
+
+    --grid-columns: auto-fit;
+
+    @media screen and (min-width: 1440px) {
+        --grid-columns: 2;
+
+        .content-wrapper section {
+            max-width: clamp(400px, calc(400px + 300 * ((100vw - 1440px) / 1440)), 500px);;
+        }
+    }
+
+    .content-wrapper {
+        display: grid;
+        grid-template-columns: repeat(var(--grid-columns, auto-fit), minmax(clamp(311px, calc(311px + 14.284023668639053 * ((100vw - 426px) / 426)), 345px), 1fr));
+        margin-left: clamp(40px, calc(40px + 80.24260355029585 * ((100vw - 426px) / 426)), 231px);
+        padding-right: 40px;
+        padding-top: 85px;
+        padding-bottom: 85px;
+        gap: 64px;
+
+        section:last-child {
+            h3 {
+                font-size: 52px;
+                line-height: 62px;
+                max-width: 177px;
+            }
+        }
+    }
+
+    span.dg-process-number {
+        display: block;
+        font-family: "Rama Gothic E", sans-serif;
+        text-transform: uppercase;
+        font-size: 84px;
+        margin-bottom: 36px;
+        line-height: 80px;
+    }
+
+    h3 {
+        font-family: "DM Serif Text", serif;
+        text-transform: unset;
+        font-size: 24px;
+        line-height: 33px;
+        margin-bottom: 1rem;
+    }
+
+    p, span:not(.dg-process-number) {
+        font-family: "Neue Haas Grotesk Display", sans-serif;
+        font-size: 18px;
+        line-height: 25px;
+        letter-spacing: 0.72px;
+    }
+}

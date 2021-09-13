@@ -22,7 +22,15 @@
     padding: 0 clamp(40px, calc(40px + 52.514792899408285 * ((100vw - 426px) / 426)), 165px);
 }
 
-div[class^="dg-container-"] {
+.dg-container-5 {
+    padding: 0 clamp(40px, calc(40px + 52.514792899408285 * ((100vw - 426px) / 426)), 165px);
+}
+
+.dg-container-6 {
+    padding: 0 clamp(40px, calc(40px + 52.514792899408285 * ((100vw - 426px) / 426)), 165px);
+}
+
+div[class^="dg-container"] {
     margin: 0 auto;
     max-width: 1440px;
 }
@@ -40,5 +48,14 @@ div[class^="dg-container-"] {
 }
 
 .dg-no-overflow {
-    overflow-x: hidden;
+    overflow: hidden;
+}
+
+.dg-flex-centered {
+    display: flex;
+    justify-content: center;
+}
+
+.dg-pink-text {
+    color: var(--clr-primary) !important;
 }

@@ -54,7 +54,7 @@ h1 {
   box-sizing: border-box; }
 
 .dg-button-wrap.dg-primary {
-  filter: drop-shadow(0 0 0.5rem var(--clr-black)); }
+  filter: drop-shadow(0 0 1.5rem rgba(var(--clr-black-rgb), 0.4)); }
   .dg-button-wrap.dg-primary .dg-button {
     padding: 1rem 2.5rem 1rem 2rem;
     clip-path: polygon(0 0, 100% 0, calc(100% - 1rem) 100%, 0 100%); }
@@ -97,6 +97,20 @@ header nav {
 .dg-actions h2:last-child {
   padding-left: clamp(0px, calc(0px + 67.63905325443787 * ((100vw - 426px) / 426)), 161px); }
 
+.dg-branding {
+  padding-top: 235px; }
+  .dg-branding section {
+    padding-left: clamp(40px, calc(40px + 220.5621301775148 * ((100vw - 426px) / 426)), 565px); }
+    .dg-branding section h2 {
+      max-width: clamp(273px, calc(273px + 116.37278106508876 * ((100vw - 426px) / 426)), 550px);
+      line-height: clamp(56px, 6.181vw, 120px);
+      font-size: clamp(60px, 5.833vw, 120px);
+      margin-bottom: clamp(25px, calc(25px + 4.621301775147929 * ((100vw - 426px) / 426)), 36px); }
+    .dg-branding section p {
+      padding-right: 40px;
+      max-width: clamp(383px, calc(383px + 95.36686390532545 * ((100vw - 426px) / 426)), 610px);
+      font-size: clamp(20px, calc(20px + 1.6804733727810652 * ((100vw - 426px) / 426)), 24px); }
+
 .dg-collaborate {
   padding-top: 167px;
   padding-bottom: 232px; }
@@ -110,6 +124,21 @@ header nav {
   .dg-collaborate p {
     margin-bottom: 4rem;
     font-size: clamp(20px, 1.667vw, 32px); }
+
+.dg-cta {
+  padding-top: clamp(87px, calc(87px + 88.22485207100591 * ((100vw - 426px) / 426)), 297px);
+  margin-left: clamp(40px, calc(40px + 216.1765 * ((100vw - 420px) / 420)), 565px);
+  max-width: clamp(268px, calc(268px + 269.71597633136093 * ((100vw - 426px) / 426)), 910px); }
+  .dg-cta h2 {
+    margin-bottom: 2rem;
+    line-height: clamp(56px, 6.181vw, 120px);
+    font-size: clamp(60px, 5.833vw, 120px); }
+  .dg-cta p {
+    margin-bottom: 4rem;
+    font-size: clamp(20px, 1.667vw, 32px); }
+  .dg-cta .dg-button-wrap {
+    position: relative;
+    left: clamp(0px, calc(118px + -49.57396449704142 * ((100vw - 426px) / 426)), 118px); }
 
 .dg-description {
   padding: 170px 0 300px; }
@@ -190,6 +219,55 @@ header nav {
     margin-bottom: 4rem;
     font-size: clamp(20px, 1.667vw, 32px); }
 
+.dg-portfolio {
+  padding-top: clamp(55px, calc(55px + 67.2189349112426 * ((100vw - 426px) / 426)), 215px); }
+  .dg-portfolio .dg-portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(137.5px, 1fr));
+    gap: 70px; }
+    .dg-portfolio .dg-portfolio-grid img {
+      width: 100%; }
+
+.dg-process {
+  margin-right: clamp(40px, calc(40px + 88.22485207100591 * ((100vw - 426px) / 426)), 250px);
+  margin-top: clamp(102px, calc(102px + 23.94674556213018 * ((100vw - 426px) / 426)), 159px);
+  --grid-columns: auto-fit; }
+  @media screen and (min-width: 1440px) {
+    .dg-process {
+      --grid-columns: 2; }
+      .dg-process .content-wrapper section {
+        max-width: clamp(400px, calc(400px + 300 * ((100vw - 1440px) / 1440)), 500px); } }
+  .dg-process .content-wrapper {
+    display: grid;
+    grid-template-columns: repeat(var(--grid-columns, auto-fit), minmax(clamp(311px, calc(311px + 14.284023668639053 * ((100vw - 426px) / 426)), 345px), 1fr));
+    margin-left: clamp(40px, calc(40px + 80.24260355029585 * ((100vw - 426px) / 426)), 231px);
+    padding-right: 40px;
+    padding-top: 85px;
+    padding-bottom: 85px;
+    gap: 64px; }
+    .dg-process .content-wrapper section:last-child h3 {
+      font-size: 52px;
+      line-height: 62px;
+      max-width: 177px; }
+  .dg-process span.dg-process-number {
+    display: block;
+    font-family: "Rama Gothic E", sans-serif;
+    text-transform: uppercase;
+    font-size: 84px;
+    margin-bottom: 36px;
+    line-height: 80px; }
+  .dg-process h3 {
+    font-family: "DM Serif Text", serif;
+    text-transform: unset;
+    font-size: 24px;
+    line-height: 33px;
+    margin-bottom: 1rem; }
+  .dg-process p, .dg-process span:not(.dg-process-number) {
+    font-family: "Neue Haas Grotesk Display", sans-serif;
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: 0.72px; }
+
 .dg-services {
   margin-left: 80px; }
   .dg-services h3 {
@@ -211,6 +289,85 @@ header nav {
     .dg-services section:not(:last-child) {
       margin-right: 60px; }
 
+.dg-testimonial {
+  padding-top: clamp(112px, calc(112px + 39.49112426035503 * ((100vw - 426px) / 426)), 206px);
+  padding-left: clamp(40px, calc(40px + 80.24260355029585 * ((100vw - 426px) / 426)), 231px); }
+  .dg-testimonial h2 {
+    max-width: clamp(273px, calc(273px + 116.37278106508876 * ((100vw - 426px) / 426)), 550px);
+    line-height: clamp(56px, 6.181vw, 120px);
+    font-size: clamp(60px, 5.833vw, 120px);
+    margin-bottom: clamp(25px, calc(25px + 4.621301775147929 * ((100vw - 426px) / 426)), 36px); }
+  .dg-testimonial p {
+    max-width: clamp(338px, calc(338px + 105.86982248520711 * ((100vw - 426px) / 426)), 590px);
+    font-size: clamp(20px, calc(20px + 1.6804733727810652 * ((100vw - 426px) / 426)), 24px);
+    margin-bottom: 2rem; }
+  .dg-testimonial .dg-testimonial-author {
+    display: block;
+    font-family: "Neue Haas Grotesk Display", sans-serif;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: bold; }
+
+footer {
+  margin-top: clamp(69px, calc(69px + 35.710059171597635 * ((100vw - 426px) / 426)), 154px); }
+  footer .dg-footer-content {
+    position: relative;
+    padding-top: clamp(159px, calc(159px + 31.50887573964497 * ((100vw - 426px) / 426)), 234px);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    row-gap: 58px;
+    padding-bottom: clamp(75px, calc(152px - 32.349112426035504 * ((100vw - 426px) / 426)), 152px); }
+    footer .dg-footer-content h2, footer .dg-footer-content h2 > span {
+      font-size: 36px;
+      line-height: 36px;
+      font-family: "Rama Gothic E", sans-serif; }
+    footer .dg-footer-content .dg-action-words {
+      position: absolute;
+      right: 0;
+      top: 111px; }
+      footer .dg-footer-content .dg-action-words span {
+        font-family: "Neue Haas Grotesk Display", sans-serif;
+        text-transform: uppercase;
+        font-size: 12px;
+        letter-spacing: 2px;
+        color: #6E6E71;
+        font-weight: bold; }
+        footer .dg-footer-content .dg-action-words span:not(:last-child) {
+          padding-right: 1rem; }
+    footer .dg-footer-content .dg-copyright, footer .dg-footer-content .dg-socials {
+      justify-self: end; }
+    footer .dg-footer-content .dg-socials img:not(:last-child) {
+      padding-right: 32px; }
+    footer .dg-footer-content p {
+      font-family: "Neue Haas Grotesk Display", sans-serif;
+      font-size: 12px;
+      line-height: 25.7167px;
+      letter-spacing: 0.48px;
+      color: #6E6E71; }
+    footer .dg-footer-content .dg-footer-logo {
+      display: flex;
+      align-items: center; }
+      footer .dg-footer-content .dg-footer-logo img, footer .dg-footer-content .dg-footer-logo p {
+        display: inline-block; }
+      footer .dg-footer-content .dg-footer-logo img {
+        margin-right: 27px; }
+  @media screen and (max-width: 1030px) {
+    footer .dg-footer-content {
+      grid-template-columns: 1fr;
+      gap: 0; }
+      footer .dg-footer-content .dg-copyright, footer .dg-footer-content .dg-socials {
+        justify-self: start; }
+      footer .dg-footer-content .dg-socials {
+        margin: 80px 0; }
+      footer .dg-footer-content .dg-footer-logo {
+        display: block; }
+        footer .dg-footer-content .dg-footer-logo img {
+          display: block; }
+      footer .dg-footer-content .dg-action-words {
+        display: none; } }
+
 .dg-important {
   color: var(--clr-primary); }
 
@@ -226,7 +383,13 @@ header nav {
 .dg-container-4 {
   padding: 0 clamp(40px, calc(40px + 52.514792899408285 * ((100vw - 426px) / 426)), 165px); }
 
-div[class^="dg-container-"] {
+.dg-container-5 {
+  padding: 0 clamp(40px, calc(40px + 52.514792899408285 * ((100vw - 426px) / 426)), 165px); }
+
+.dg-container-6 {
+  padding: 0 clamp(40px, calc(40px + 52.514792899408285 * ((100vw - 426px) / 426)), 165px); }
+
+div[class^="dg-container"] {
   margin: 0 auto;
   max-width: 1440px; }
 
@@ -239,4 +402,11 @@ div[class^="dg-container-"] {
   max-width: clamp(623px, 43.264vw, 900px); }
 
 .dg-no-overflow {
-  overflow-x: hidden; }
+  overflow: hidden; }
+
+.dg-flex-centered {
+  display: flex;
+  justify-content: center; }
+
+.dg-pink-text {
+  color: var(--clr-primary) !important; }

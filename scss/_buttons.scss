@@ -1,6 +1,7 @@
 .dg-button-wrap {
     &.dg-primary {
-        filter: drop-shadow(0 0 0.5rem var(--clr-black));
+        filter: drop-shadow(0 0 1.5rem rgba(var(--clr-black-rgb), 0.4));
+        
         .dg-button {
             padding: 1rem 2.5rem 1rem 2rem;
             clip-path: polygon(0 0, 100% 0, calc(100% - 1rem) 100%, 0 100%);

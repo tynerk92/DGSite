@@ -1,0 +1,20 @@
+.dg-branding {
+    padding-top: 235px;
+
+    section {
+        padding-left: clamp(40px, calc(40px + 220.5621301775148 * ((100vw - 426px) / 426)), 565px);
+        
+        h2 {
+            max-width: clamp(273px, calc(273px + 116.37278106508876 * ((100vw - 426px) / 426)), 550px);
+            line-height: clamp(56px, 6.181vw, 120px);
+            font-size: clamp(60px, 5.833vw, 120px);
+            margin-bottom: clamp(25px, calc(25px + 4.621301775147929 * ((100vw - 426px) / 426)), 36px);
+        }
+
+        p {
+            padding-right: 40px;
+            max-width: clamp(383px, calc(383px + 95.36686390532545 * ((100vw - 426px) / 426)), 610px);
+            font-size: clamp(20px, calc(20px + 1.6804733727810652 * ((100vw - 426px) / 426)), 24px);
+        }
+    }
+}

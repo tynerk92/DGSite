@@ -1,0 +1,26 @@
+.dg-testimonial {
+    padding-top: clamp(112px, calc(112px + 39.49112426035503 * ((100vw - 426px) / 426)), 206px);
+    padding-left: clamp(40px, calc(40px + 80.24260355029585 * ((100vw - 426px) / 426)), 231px);
+    h2 {
+        max-width: clamp(273px, calc(273px + 116.37278106508876 * ((100vw - 426px) / 426)), 550px);
+        line-height: clamp(56px, 6.181vw, 120px);
+        font-size: clamp(60px, 5.833vw, 120px);
+        margin-bottom: clamp(25px, calc(25px + 4.621301775147929 * ((100vw - 426px) / 426)), 36px);
+    }
+
+    p {
+        max-width: clamp(338px, calc(338px + 105.86982248520711 * ((100vw - 426px) / 426)), 590px);
+        font-size: clamp(20px, calc(20px + 1.6804733727810652 * ((100vw - 426px) / 426)), 24px);
+        margin-bottom: 2rem;
+    }
+
+    .dg-testimonial-author {
+        display: block;
+        font-family: "Neue Haas Grotesk Display", sans-serif;
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+}

@@ -5,7 +5,7 @@
   "private": true,
   "main": "public/index.html",
   "scripts": {
-    "serve": "browser-sync start -s -f ./public ./public/styles --index ./public/index.html --host localhost --port 8080",
+    "serve": "browser-sync start -s -f ./public/**/* --index ./public/index.html --host localhost --port 8080",
     "css": "node-sass -w ./scss -r -o ./public/styles --linefeed lf"
   },
   "repository": {
