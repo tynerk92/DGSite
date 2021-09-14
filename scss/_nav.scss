@@ -1,11 +1,120 @@
 header {
+    .dg-menu-overlay {
+        z-index: 2;
+        top: 0px;
+        left: -100vw;
+        padding-top: 0;
+        width: 100vw;
+        height: 100vh;
+        transition: all 0.5s ease;
+        background-color: white;
+        position: fixed;
+    }
+
     nav {
+        z-index: 10;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding-top: 45px;
+        color: white;
+        transition: color 0.5s ease;
+
+        .dg-menu {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+
+            span {
+                margin-right: 1rem;
+                color: inherit;
+                letter-spacing: 2px;
+            }
+
+            .dg-menu-toggle {
+                width: 45px;
+                height: 45px;
+                border: 1px solid #fff;
+                border-radius: 45px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: border-color 0.5s ease;
+                
+
+                .dg-menu-toggle-bar {
+                    position: relative;
+                    width: 20px;
+                    height: 2px;
+                    background-color: #fff;
+                    transition: background-color 0.5s ease, transform 0.5s ease;
+                    border-radius: 2px;
+
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        width: 20px;
+                        height: 2px;
+                        background-color: #fff;
+                        top: -7px;
+                        transition: background-color 0.5s ease, transform 0.5s ease, opacity 0.5s ease;
+                        border-radius: 2px;
+                    }
+
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        width: 20px;
+                        height: 2px;
+                        background-color: #fff;
+                        top: 7px;
+                        transition: background-color 0.5s ease, transform 0.5s ease;
+                        border-radius: 2px;
+                    }
+                }
+            }
+        }
 
         &.dg-fixed-menu {
             display: none;
+        }
+    }
+}
+
+body.menu-open {
+    position: relative;
+
+    .dg-nav {
+        position: relative;
+        z-index: 3;
+    }
+
+    nav {
+        color: var(--clr-black);
+    }
+
+    .dg-menu-overlay {
+        z-index: 2;
+        left: 0px;
+    }
+
+    .dg-menu-toggle {
+        border-color: var(--clr-black) !important;
+        .dg-menu-toggle-bar {
+            background-color: var(--clr-black) !important;
+
+            transform: rotate(45deg);
+
+            &:before {
+                background-color: var(--clr-black) !important;
+                transform: rotate(-90deg) translate(-6px, 0px);
+                opacity: -1;
+            }
+
+            &:after {
+                background-color: var(--clr-black) !important;
+                transform: rotate(90deg) translate(-6px, 0px);
+            }
         }
     }
 }
