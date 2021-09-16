@@ -57,10 +57,12 @@ h1 {
   filter: drop-shadow(0 0 1.5rem rgba(var(--clr-black-rgb), 0.4)); }
   .dg-button-wrap.dg-primary .dg-button {
     padding: 1rem 2.5rem 1rem 2rem;
+    -webkit-clip-path: polygon(0 0, 100% 0, calc(100% - 1rem) 100%, 0 100%);
     clip-path: polygon(0 0, 100% 0, calc(100% - 1rem) 100%, 0 100%); }
 
 .dg-button-wrap.dg-secondary .dg-button {
   padding: 1rem 2rem 1rem 2.5rem;
+  -webkit-clip-path: polygon(1rem 0, 100% 0, 100% 100%, 0 100%);
   clip-path: polygon(1rem 0, 100% 0, 100% 100%, 0 100%);
   background: #3B3B3F;
   margin-left: -0.5rem; }
@@ -80,14 +82,43 @@ header .dg-menu-overlay {
   z-index: 2;
   top: 0px;
   left: -100vw;
-  padding-top: 0;
-  width: 100vw;
+  padding-top: 225px;
+  width: 100%;
   height: 100vh;
   transition: all 0.5s ease;
   background-color: white;
   position: fixed; }
+  header .dg-menu-overlay .dg-container {
+    height: 100%;
+    padding-bottom: 80px; }
+  header .dg-menu-overlay .dg-menu-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%; }
+  header .dg-menu-overlay ul {
+    padding: 0;
+    max-width: 100vw; }
+    header .dg-menu-overlay ul li {
+      display: flex;
+      justify-content: flex-end;
+      list-style: none; }
+      header .dg-menu-overlay ul li a {
+        font-family: "Rama Gothic E", sans-serif;
+        text-transform: uppercase;
+        font-size: 84px;
+        line-height: 89px;
+        color: var(--clr-dark);
+        opacity: 0.18;
+        text-decoration: none; }
+        header .dg-menu-overlay ul li a.dg-active {
+          opacity: 1; }
+  header .dg-menu-overlay .dg-menu-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
 
-header nav {
+header .dg-nav {
   z-index: 10;
   display: flex;
   justify-content: space-between;
@@ -95,15 +126,15 @@ header nav {
   padding-top: 45px;
   color: white;
   transition: color 0.5s ease; }
-  header nav .dg-menu {
+  header .dg-nav .dg-menu {
     display: flex;
     align-items: center;
     cursor: pointer; }
-    header nav .dg-menu span {
+    header .dg-nav .dg-menu span {
       margin-right: 1rem;
       color: inherit;
       letter-spacing: 2px; }
-    header nav .dg-menu .dg-menu-toggle {
+    header .dg-nav .dg-menu .dg-menu-toggle {
       width: 45px;
       height: 45px;
       border: 1px solid #fff;
@@ -112,14 +143,14 @@ header nav {
       justify-content: center;
       align-items: center;
       transition: border-color 0.5s ease; }
-      header nav .dg-menu .dg-menu-toggle .dg-menu-toggle-bar {
+      header .dg-nav .dg-menu .dg-menu-toggle .dg-menu-toggle-bar {
         position: relative;
         width: 20px;
         height: 2px;
         background-color: #fff;
         transition: background-color 0.5s ease, transform 0.5s ease;
         border-radius: 2px; }
-        header nav .dg-menu .dg-menu-toggle .dg-menu-toggle-bar:before {
+        header .dg-nav .dg-menu .dg-menu-toggle .dg-menu-toggle-bar:before {
           content: '';
           position: absolute;
           width: 20px;
@@ -128,7 +159,7 @@ header nav {
           top: -7px;
           transition: background-color 0.5s ease, transform 0.5s ease, opacity 0.5s ease;
           border-radius: 2px; }
-        header nav .dg-menu .dg-menu-toggle .dg-menu-toggle-bar:after {
+        header .dg-nav .dg-menu .dg-menu-toggle .dg-menu-toggle-bar:after {
           content: '';
           position: absolute;
           width: 20px;
@@ -137,16 +168,19 @@ header nav {
           top: 7px;
           transition: background-color 0.5s ease, transform 0.5s ease;
           border-radius: 2px; }
-  header nav.dg-fixed-menu {
+  header .dg-nav.dg-fixed-menu {
     display: none; }
 
 body.menu-open {
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
   body.menu-open .dg-nav {
     position: relative;
     z-index: 3; }
   body.menu-open nav {
     color: var(--clr-black); }
+    body.menu-open nav h2 {
+      color: inherit; }
   body.menu-open .dg-menu-overlay {
     z-index: 2;
     left: 0px; }
@@ -489,4 +523,5 @@ div[class^="dg-container"] {
   justify-content: center; }
 
 .dg-pink-text {
-  color: var(--clr-primary) !important; }
+  color: var(--clr-primary) !important;
+  font-family: inherit; }

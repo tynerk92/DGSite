@@ -4,6 +4,7 @@
         
         .dg-button {
             padding: 1rem 2.5rem 1rem 2rem;
+            -webkit-clip-path: polygon(0 0, 100% 0, calc(100% - 1rem) 100%, 0 100%);
             clip-path: polygon(0 0, 100% 0, calc(100% - 1rem) 100%, 0 100%);
         }
     }
@@ -11,6 +12,7 @@
     &.dg-secondary {
         .dg-button {
             padding: 1rem 2rem 1rem 2.5rem;
+            -webkit-clip-path: polygon(1rem 0, 100% 0, 100% 100%, 0 100%);
             clip-path: polygon(1rem 0, 100% 0, 100% 100%, 0 100%);
             background: #3B3B3F;
             margin-left: -0.5rem;

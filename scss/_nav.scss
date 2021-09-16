@@ -3,15 +3,56 @@ header {
         z-index: 2;
         top: 0px;
         left: -100vw;
-        padding-top: 0;
-        width: 100vw;
+        padding-top: 225px;
+        width: 100%;
         height: 100vh;
         transition: all 0.5s ease;
         background-color: white;
         position: fixed;
+
+        .dg-container {
+            height: 100%;
+            padding-bottom: 80px;
+        }
+
+        .dg-menu-wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+        }
+
+        ul {
+            padding: 0;
+            max-width: 100vw;
+            li {
+                display: flex;
+                justify-content: flex-end;
+                list-style: none;
+                a {
+                    font-family: "Rama Gothic E", sans-serif;
+                    text-transform: uppercase;
+                    font-size: 84px;
+                    line-height: 89px;
+                    color: var(--clr-dark);
+                    opacity: 0.18;
+                    text-decoration: none;
+                    
+                    &.dg-active {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+        .dg-menu-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
     }
 
-    nav {
+    .dg-nav {
         z-index: 10;
         display: flex;
         justify-content: space-between;
@@ -83,6 +124,7 @@ header {
 
 body.menu-open {
     position: relative;
+    overflow: hidden;
 
     .dg-nav {
         position: relative;
@@ -91,6 +133,10 @@ body.menu-open {
 
     nav {
         color: var(--clr-black);
+
+        h2 {
+            color: inherit;
+        }
     }
 
     .dg-menu-overlay {
