@@ -1,6 +1,8 @@
 .dg-cta {
+    position: relative;
     padding-top: clamp(87px, calc(87px + 88.22485207100591 * ((100vw - 426px) / 426)), 297px);
-    margin-left: clamp(40px, calc(40px + 216.1765 * ((100vw - 420px) / 420)), 565px);
+    padding-left: clamp(40px, calc(40px + 216.1765 * ((100vw - 420px) / 420)), 565px);
+    padding-bottom: clamp(69px, calc(69px + 35.710059171597635 * ((100vw - 426px) / 426)), 154px);
     max-width: clamp(268px, calc(268px + 269.71597633136093 * ((100vw - 426px) / 426)), 910px);
 
     h2 {

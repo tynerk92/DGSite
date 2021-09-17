@@ -1,5 +1,40 @@
+// .dg-services {
+//     margin-left: 80px;
+
+//     h3 {
+//         font-family: "DM Serif Text", serif;
+//         font-size: clamp(20px, 1.667vw, 32px);
+//         text-transform: none;
+//         max-width: 70%;
+//         margin-bottom: 25px;
+//     }
+
+//     .content-wrapper {
+//         display: flex;
+//         flex-wrap: wrap;
+//         padding-top: 64px;
+//         margin: 64px
+//                 clamp(45px, calc(45px + 16.80473372781065 * ((100vw - 426px) / 426)), 85px)
+//                 0px;
+        
+//     }
+
+//     section {
+//         flex-basis: calc(33.334% - 40px);
+//         margin-bottom: 64px;
+//         min-width: clamp(285px, calc(285px + 23.106508875739646 * ((100vw - 426px) / 426)), 340px);
+//         max-width: clamp(285px, calc(285px + 23.106508875739646 * ((100vw - 426px) / 426)), 340px);
+//         &:not(:last-child) {
+//             margin-right: 60px;
+//         }
+//     }
+// }
+
 .dg-services {
-    margin-left: 80px;
+    padding: 
+        60px 
+        clamp(45px, calc(45px + 16.80473372781065 * ((100vw - 426px) / 426)), 85px)
+    ;
 
     h3 {
         font-family: "DM Serif Text", serif;
@@ -9,23 +44,54 @@
         margin-bottom: 25px;
     }
 
-    .content-wrapper {
-        display: flex;
-        flex-wrap: wrap;
-        padding-top: 64px;
-        margin: 64px
-                clamp(45px, calc(45px + 16.80473372781065 * ((100vw - 426px) / 426)), 85px)
-                0px;
-        
+    p {
+        font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
+        font-size: 18px;
+        line-height: 25px;
+        letter-spacing: 0.72px;
+        opacity: 0.76;
     }
 
-    section {
-        flex-basis: calc(33.334% - 40px);
-        margin-bottom: 64px;
-        min-width: clamp(285px, calc(285px + 23.106508875739646 * ((100vw - 426px) / 426)), 340px);
-        max-width: clamp(285px, calc(285px + 23.106508875739646 * ((100vw - 426px) / 426)), 340px);
-        &:not(:last-child) {
-            margin-right: 60px;
+    .content-wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, minmax( clamp(286px, calc(286px + 22.68639053254438 * ((100vw - 426px) / 426)), 340px), 1fr));
+        column-gap: 60px;
+
+        @media screen and (max-width: 1390px) {
+            grid-template-areas:
+                "header-1"
+                "content-1"
+                "header-2"
+                "content-2"
+                "header-3"
+                "content-3";
+            
+            h3 {
+                margin-top: 32px;
+                margin-bottom: 18px;
+
+                &.dg-service-1 {
+                    grid-area: header-1;
+                }
+                &.dg-service-2 {
+                    grid-area: header-2;
+                }
+                &.dg-service-3 {
+                    grid-area: header-3;
+                }
+            }
+
+            p {
+                &.dg-service-1 {
+                    grid-area: content-1;
+                }
+                &.dg-service-2 {
+                    grid-area: content-2;
+                }
+                &.dg-service-3 {
+                    grid-area: content-3;
+                }
+            }
         }
     }
 }

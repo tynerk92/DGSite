@@ -1,19 +1,31 @@
 .dg-actions {
     h2 {
         line-height: clamp(56px, 6.181vw, 120px);
-        font-size: clamp(60px, 5.833vw, 120px);
+        font-size: clamp(60px, calc(60px + 4.791002811621369 * ((100vw - 426px) / 426)), 84px);
         margin-bottom: clamp(32px, calc(32px + 36.97041420118343 * ((100vw - 426px) / 426)), 120px);
     }
 
-    h2:first-child {
-        padding-left: clamp(0px, calc(0px + 297.8639053254438 * ((100vw - 426px) / 426)), 709px);
-    }
+    // h2:first-child {
+    //     padding-left: clamp(0px, calc(0px + 297.8639053254438 * ((100vw - 426px) / 426)), 709px);
+    // }
 
-    h2:nth-child(2) {
-        padding-left: clamp(0px, calc(0px + 189.05325443786984 * ((100vw - 426px) / 426)), 450px);
-    }
+    // h2:nth-child(2) {
+    //     padding-left: clamp(0px, calc(0px + 189.05325443786984 * ((100vw - 426px) / 426)), 450px);
+    // }
 
-    h2:last-child {
-        padding-left: clamp(0px, calc(0px + 67.63905325443787 * ((100vw - 426px) / 426)), 161px);
+    // h2:last-child {
+    //     padding-left: clamp(0px, calc(0px + 67.63905325443787 * ((100vw - 426px) / 426)), 161px);
+    // }
+
+    .dg-container-3 {
+        display: flex;
+        flex-direction: column;
+        h2:first-child {
+            align-self: flex-end;
+        }
+
+        h2:nth-child(2) {
+            align-self: center;
+        }
     }
 }

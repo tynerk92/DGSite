@@ -1,11 +1,12 @@
 footer {
-    margin-top: clamp(69px, calc(69px + 35.710059171597635 * ((100vw - 426px) / 426)), 154px);
+    position: relative;
+    overflow: hidden;
 
     .dg-footer-content {
         position: relative;
         padding-top:  clamp(159px, calc(159px + 31.50887573964497 * ((100vw - 426px) / 426)), 234px);
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        grid-template-columns: repeat(2, minmax(400px, 1fr));
         row-gap: 58px;
         padding-bottom: clamp(75px, calc(152px - 32.349112426035504 * ((100vw - 426px) / 426)), 152px);
         

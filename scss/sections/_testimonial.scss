@@ -1,4 +1,5 @@
 .dg-testimonial {
+    position: relative;
     padding-top: clamp(112px, calc(112px + 39.49112426035503 * ((100vw - 426px) / 426)), 206px);
     padding-left: clamp(40px, calc(40px + 80.24260355029585 * ((100vw - 426px) / 426)), 231px);
     h2 {

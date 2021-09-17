@@ -1,5 +1,6 @@
 .dg-branding {
-    padding-top: 235px;
+    padding-top: clamp(133px, calc(133px + 42.85207100591716 * ((100vw - 426px) / 426)), 235px);
+    position: relative;
 
     section {
         padding-left: clamp(40px, calc(40px + 220.5621301775148 * ((100vw - 426px) / 426)), 565px);
