@@ -10,7 +10,6 @@
         font-size: clamp(20px, 1.667vw, 32px);
         text-transform: none;
         margin-bottom: 25px;
-        // letter-spacing: 1px;
     }
 
     p {
@@ -23,7 +22,7 @@
 
     .dg-content-wrapper {
         display: grid;
-        grid-template-columns: repeat(3, minmax( clamp(286px, calc(286px + 22.68639053254438 * ((100vw - 426px) / 426)), 340px), 1fr));
+        grid-template-columns: repeat(3, minmax(200px, 1fr));
         padding-bottom: 60px;
         column-gap: 60px;
 
@@ -34,7 +33,7 @@
             transform: translateY(50%);
         }
 
-        @media screen and (max-width: 1390px) {
+        @media screen and (max-width: 910px) {
             grid-template-areas:
                 "header-1"
                 "content-1"
@@ -42,6 +41,7 @@
                 "content-2"
                 "header-3"
                 "content-3";
+            grid-template-columns: 1fr;
             
             h3 {
                 margin-top: 32px;

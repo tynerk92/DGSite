@@ -547,7 +547,7 @@ body.menu-open {
     opacity: 0.76; }
   .dg-services .dg-content-wrapper {
     display: grid;
-    grid-template-columns: repeat(3, minmax(clamp(286px, calc(286px + 22.68639053254438 * ((100vw - 426px) / 426)), 340px), 1fr));
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
     padding-bottom: 60px;
     column-gap: 60px; }
     .dg-services .dg-content-wrapper .dg-button-wrap {
@@ -555,9 +555,10 @@ body.menu-open {
       bottom: 0;
       right: clamp(23px, calc(23px + 7.1420118343195265 * ((100vw - 426px) / 426)), 40px);
       transform: translateY(50%); }
-    @media screen and (max-width: 1390px) {
+    @media screen and (max-width: 910px) {
       .dg-services .dg-content-wrapper {
-        grid-template-areas: "header-1" "content-1" "header-2" "content-2" "header-3" "content-3"; }
+        grid-template-areas: "header-1" "content-1" "header-2" "content-2" "header-3" "content-3";
+        grid-template-columns: 1fr; }
         .dg-services .dg-content-wrapper h3 {
           margin-top: 32px;
           margin-bottom: 18px; }
