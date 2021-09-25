@@ -1,14 +1,58 @@
 .dg-hero {
-    padding: 168px 0 213px 0;
+    max-width: clamp(333px, calc(333px + 204.5976331360947 * ((100vw - 426px) / 426)), 820px);
+    padding-top: 168px;
 
-    h1 {
-        margin-bottom: 2rem;
-        line-height: clamp(56px, 3.889vw, 89px);
-        font-size: clamp(60px, 5.833vw, 120px);
+    .dg-hero-content {
+        padding-left: clamp(0px, calc(0px + 51.25443786982249 * ((100vw - 426px) / 426)), 122px);
+
+        h1 {
+            margin-bottom: 2rem;
+            line-height: clamp(56px, calc(56px + 13.863905325443787 * ((100vw - 426px) / 426)), 89px);
+            font-size: clamp(60px, calc(60px + 10.08284023668639 * ((100vw - 426px) / 426)), 84px);
+        }
+
+        p {
+            margin-bottom: 4rem;
+            font-size: clamp(20px, calc(20px + 1.6804733727810652 * ((100vw - 426px) / 426)), 24px);
+        }
     }
 
-    p {
-        margin-bottom: 4rem;
-        font-size: clamp(20px, 1.667vw, 32px);
+    .dg-hero-wrapper {
+        position: relative;
+        padding-bottom: 213px;
+    }
+
+    .dg-hero-labels {
+        position: absolute;
+        transform-origin: bottom left;
+        transform: rotate(-90deg) translateY(100%);
+        left: 0;
+        bottom: clamp(198px, calc(198px + 193.6969696969697 * ((100vw - 846px) / 846)), 334px);
+        margin-left: -5px;
+
+        @media screen and (max-width: 846px) {
+            & {
+                display: none;
+            }
+        }
+        
+        span {
+            font-family: "Neue Haas Grotesk Display", sans-serif;
+            font-weight: bold;
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            opacity: 0.5;
+
+            &:not(:last-child) {
+                padding-right: 29px;
+            }
+        }
+    }
+
+    .dg-hero-arrow {
+        position: absolute;
+        bottom: 45px;
+        left: 0;
     }
 }

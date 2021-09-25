@@ -42,7 +42,7 @@ function updateProcessSectionMargin() {
     const servicesSection = document.querySelector('.dg-process');
     if (containerPadding >= initialMargin + 36.2) {
         // 36.2 is the distance to the left of the container it should be
-        servicesSection.style.marginRight = `${containerPadding + containerMargin - 36.2}px`;
+        servicesSection.style.marginRight = `${containerPadding + containerMargin + 36.2}px`;
     } else {
         servicesSection.style.marginRight = `${initialMargin}px`;
     }
@@ -63,12 +63,17 @@ function updateProcessSectionMargin() {
 function toggleMenu() {
     const menuOverlay = document.getElementById('dg-menu-overlay');
     const menuText = document.getElementById('dg-menu-button-text');
+
+    const scrollbarWidth = window.innerWidth - document.body.clientWidth;
         
     if (toggleClass(document.body, 'menu-open')) {
+        // Account for the scrollbar disappearing due to overflow-y: hidden when the menu is open
+        document.body.style.paddingRight = `${scrollbarWidth}px`;
         menuText.innerHTML = 'Close';
 
         menuOverlay.style.top = "0px";
     } else {
+        document.body.style.paddingRight = 0;
         menuText.innerHTML = 'Menu';
 
         menuOverlay.style.top = "100vh";

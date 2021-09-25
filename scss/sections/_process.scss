@@ -1,5 +1,5 @@
 .dg-process {
-    margin-right: clamp(40px, calc(40px + 88.22485207100591 * ((100vw - 426px) / 426)), 250px);
+    // margin-right set by javascript
     margin-top: clamp(102px, calc(102px + 23.94674556213018 * ((100vw - 426px) / 426)), 159px);
 
     --grid-columns: auto-fit;
@@ -12,7 +12,7 @@
         }
     }
 
-    .content-wrapper {
+    .dg-content-wrapper {
         display: grid;
         grid-template-columns: repeat(var(--grid-columns, auto-fit), minmax(clamp(311px, calc(311px + 14.284023668639053 * ((100vw - 426px) / 426)), 345px), 1fr));
         margin-left: clamp(40px, calc(40px + 80.24260355029585 * ((100vw - 426px) / 426)), 231px);
@@ -26,6 +26,31 @@
                 font-size: 52px;
                 line-height: 62px;
                 max-width: 177px;
+            }
+        }
+
+        .dg-section-title {
+            top: 85px;
+            left: clamp(-115px, calc(-26px - 37.3905325443787 * ((100vw - 426px) / 426)), -26px);
+        }
+
+        .dg-button-wrap {
+            position: absolute;
+            bottom: 207px;
+            right: 0;
+            transform: translateX(50%);
+        }
+    }
+
+    @media screen and (max-width: 1100px) {
+        --grid-columns: 1;
+
+        .dg-content-wrapper {
+            .dg-button-wrap {
+                bottom: 0px;
+                right: unset;
+                left: clamp(0px, calc(0px + 189.61424332344214 * ((100vw - 426px) / 426)), 300px);
+                transform: translateY(50%);
             }
         }
     }
@@ -47,7 +72,7 @@
         margin-bottom: 1rem;
     }
 
-    p, span:not(.dg-process-number) {
+    p, span:not(.dg-process-number):not(.dg-section-title) {
         font-family: "Neue Haas Grotesk Display", sans-serif;
         font-size: 18px;
         line-height: 25px;

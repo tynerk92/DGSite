@@ -9,6 +9,10 @@
         overflow: hidden;
     }
 
+    .dg-section-title {
+        left: clamp(-45px, calc(-26px - 7.982248520710059 * ((100vw - 426px) / 426)), -26px);
+    }
+
     .overlay {
         width: 100%;
         height: 100%;

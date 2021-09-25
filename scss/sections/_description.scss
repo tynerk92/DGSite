@@ -2,14 +2,25 @@
     padding: 170px 0 300px;
     position: relative;
 
-    h2 {
-        font-size: clamp(60px, 5.833vw, 120px);
-        line-height: clamp(56px, 5.556vw, 120px);
-        margin-bottom: 2rem;
-    }
+    .dg-content-wrapper {
+        width: clamp(331px, calc(331px + 157.96449704142012 * ((100vw - 426px) / 426)), 707px);
+        padding-left: clamp(0px, calc(0px + 49.994082840236686 * ((100vw - 426px) / 426)), 119px);
 
-    p {
-        margin-bottom: 4rem;
-        font-size: clamp(20px, 1.667vw, 32px);
+        h2 {
+            font-size: clamp(60px, calc(60px + 10.08284023668639 * ((100vw - 426px) / 426)), 84px);
+            line-height: clamp(56px, calc(56px + 10.08284023668639 * ((100vw - 426px) / 426)), 80px);
+            margin-bottom: 2rem;
+            max-width: clamp(191px, calc(191px + 133.5976331360947 * ((100vw - 426px) / 426)), 511px);
+        }
+
+        p {
+            margin-bottom: 4rem;
+            font-size: clamp(20px, calc(20px + 1.6804733727810652 * ((100vw - 426px) / 426)), 24px);
+            line-height: clamp(32px, calc(32px + 1.6804733727810652 * ((100vw - 426px) / 426)), 36px);
+        }
+
+        .dg-section-title {
+            left: clamp(-26px, calc(-26px + 10.923076923076923 * ((100vw - 426px) / 426)), 0px);
+        }
     }
 }
