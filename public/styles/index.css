@@ -355,7 +355,7 @@ body.menu-open {
     left: clamp(0px, calc(118px + -49.57396449704142 * ((100vw - 426px) / 426)), 118px); }
 
 .dg-description {
-  padding: 170px 0 300px;
+  padding: 170px 0;
   position: relative; }
   .dg-description .dg-content-wrapper {
     width: clamp(331px, calc(331px + 157.96449704142012 * ((100vw - 426px) / 426)), 707px);
@@ -366,7 +366,7 @@ body.menu-open {
       margin-bottom: 2rem;
       max-width: clamp(191px, calc(191px + 133.5976331360947 * ((100vw - 426px) / 426)), 511px); }
     .dg-description .dg-content-wrapper p {
-      margin-bottom: 4rem;
+      margin: 0;
       font-size: clamp(20px, calc(20px + 1.6804733727810652 * ((100vw - 426px) / 426)), 24px);
       line-height: clamp(32px, calc(32px + 1.6804733727810652 * ((100vw - 426px) / 426)), 36px); }
     .dg-description .dg-content-wrapper .dg-section-title {
