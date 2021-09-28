@@ -1,21 +1,10 @@
 .dg-actions {
     h2 {
-        line-height: clamp(56px, 6.181vw, 120px);
-        font-size: clamp(60px, calc(60px + 4.791002811621369 * ((100vw - 426px) / 426)), 84px);
+        line-height: clamp(56px, calc(56px + 10.08284023668639 * ((100vw - 426px) / 426)), 80px);
+        font-size: clamp(60px, calc(60px + 10.08284023668639 * ((100vw - 426px) / 426)), 84px);
         margin-bottom: clamp(32px, calc(32px + 36.97041420118343 * ((100vw - 426px) / 426)), 120px);
+        max-width: clamp(650px, calc(650px + 121.42857142857143 * ((100vw - 1020px) / 1020)), 700px);
     }
-
-    // h2:first-child {
-    //     padding-left: clamp(0px, calc(0px + 297.8639053254438 * ((100vw - 426px) / 426)), 709px);
-    // }
-
-    // h2:nth-child(2) {
-    //     padding-left: clamp(0px, calc(0px + 189.05325443786984 * ((100vw - 426px) / 426)), 450px);
-    // }
-
-    // h2:last-child {
-    //     padding-left: clamp(0px, calc(0px + 67.63905325443787 * ((100vw - 426px) / 426)), 161px);
-    // }
 
     .dg-container-3 {
         display: flex;

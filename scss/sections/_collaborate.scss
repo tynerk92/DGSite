@@ -1,7 +1,7 @@
 .dg-collaborate {
     position: relative;
     padding-top: 167px;
-    padding-bottom: 232px;
+    padding-bottom: clamp(32px, calc(32px + 34.8698224852071 * ((100vw - 426px) / 426)), 115px);
 
     section {
         padding-left: clamp(40px, calc(40px + 216.1765 * ((100vw - 420px) / 420)), 565px);
@@ -15,7 +15,12 @@
     }
 
     p {
-        margin-bottom: 4rem;
-        font-size: clamp(20px, 1.667vw, 32px);
+        margin: 0;
+        &:not(:last-of-type) {
+            margin-bottom: 48px;
+        }
+
+        font-size: clamp(20px, calc(20px + 1.6804733727810652 * ((100vw - 426px) / 426)), 24px);
+        line-height: clamp(32px, calc(32px + 1.6804733727810652 * ((100vw - 426px) / 426)), 36px);
     }
 }
