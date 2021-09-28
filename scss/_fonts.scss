@@ -32,22 +32,24 @@
     font-weight:700;
 }
 
+:root {
+    --dg-font-rama: "Rama Gothic E", sans-serif;
+    --dg-font-DM: "DM Serif Text", serif;
+    --dg-font-Neue: "Neue Haas Grotesk Display", sans-serif;
+}
+
 * {
-    font-family: "DM Serif Text", serif;
+    font-family: var(--dg-font-DM);
 }
 
 h1,h2,h3,h4,h5,h6 {
-    font-family: "Rama Gothic E", sans-serif;
+    font-family: var(--dg-font-rama);
     text-transform: uppercase;
 }
 
 h1 {
     font-size: 84px;
     line-height: 89px;
-}
-
-.dg-text {
-    font-family: "DM Serif Text", serif;
 }
 
 .dg-heading {

@@ -28,19 +28,21 @@
   font-style: normal;
   font-weight: 700; }
 
+:root {
+  --dg-font-rama: "Rama Gothic E", sans-serif;
+  --dg-font-DM: "DM Serif Text", serif;
+  --dg-font-Neue: "Neue Haas Grotesk Display", sans-serif; }
+
 * {
-  font-family: "DM Serif Text", serif; }
+  font-family: var(--dg-font-DM); }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Rama Gothic E", sans-serif;
+  font-family: var(--dg-font-rama);
   text-transform: uppercase; }
 
 h1 {
   font-size: 84px;
   line-height: 89px; }
-
-.dg-text {
-  font-family: "DM Serif Text", serif; }
 
 .dg-heading {
   font-family: "Neue Haas Grotesk Display", sans-serif;
@@ -447,10 +449,10 @@ body.menu-open {
   .dg-hero .dg-hero-labels {
     position: absolute;
     transform-origin: bottom left;
-    transform: rotate(-90deg) translateY(100%);
+    transform: rotate(-90deg) translate(-100%, 100%);
     left: 0;
-    bottom: clamp(198px, calc(198px + 193.6969696969697 * ((100vw - 846px) / 846)), 334px);
-    margin-left: -5px; }
+    margin-left: -5px;
+    top: clamp(-15px, calc(-15px + 8.569983136593592 * ((100vw - 847px) / 847)), -9px); }
     @media screen and (max-width: 846px) {
       .dg-hero .dg-hero-labels {
         display: none; } }
@@ -711,3 +713,13 @@ div[class^="dg-container"] {
   font-weight: bold;
   transform: rotate(-90deg) translate(calc(-100% + var(--dg-section-title-line-height)/2), 100%);
   transform-origin: bottom left; }
+
+section h2 {
+  font-size: clamp(60px, calc(60px + 10.08284023668639 * ((100vw - 426px) / 426)), 84px);
+  line-height: clamp(56px, calc(56px + 10.08284023668639 * ((100vw - 426px) / 426)), 80px);
+  margin-bottom: 2rem; }
+
+section p {
+  margin-bottom: 4rem;
+  font-size: clamp(20px, calc(20px + 1.6804733727810652 * ((100vw - 426px) / 426)), 24px);
+  line-height: clamp(32px, calc(32px + 1.6804733727810652 * ((100vw - 426px) / 426)), 36px); }

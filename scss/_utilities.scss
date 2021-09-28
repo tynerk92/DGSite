@@ -75,3 +75,17 @@ div[class^="dg-container"] {
     transform: rotate(-90deg) translate(calc(-100% + var(--dg-section-title-line-height)/2 ), 100%);
     transform-origin: bottom left;
 }
+
+section {
+    h2 {
+        font-size: clamp(60px, calc(60px + 10.08284023668639 * ((100vw - 426px) / 426)), 84px);
+        line-height: clamp(56px, calc(56px + 10.08284023668639 * ((100vw - 426px) / 426)), 80px);
+        margin-bottom: 2rem;    
+    }
+
+    p {
+        margin-bottom: 4rem;
+        font-size: clamp(20px, calc(20px + 1.6804733727810652 * ((100vw - 426px) / 426)), 24px);
+        line-height: clamp(32px, calc(32px + 1.6804733727810652 * ((100vw - 426px) / 426)), 36px);
+    }
+}

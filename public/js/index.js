@@ -25,6 +25,9 @@ function updateServicesSectionMargin() {
     const initialMargin = 40;
 
     const servicesSection = document.querySelector('.dg-services');
+    
+    if (!servicesSection) return;
+
     if (containerPadding >= initialMargin + 36.2) {
         // 36.2 is the distance to the left of the container it should be
         servicesSection.style.marginLeft = `${containerPadding + containerMargin - 36.2}px`;
@@ -39,12 +42,15 @@ function updateProcessSectionMargin() {
     const containerMargin = parseFloat(containerStyle.marginLeft);
     const initialMargin = 40;
 
-    const servicesSection = document.querySelector('.dg-process');
+    const processSection = document.querySelector('.dg-process');
+
+    if (!processSection) return;
+
     if (containerPadding >= initialMargin + 36.2) {
         // 36.2 is the distance to the left of the container it should be
-        servicesSection.style.marginRight = `${containerPadding + containerMargin + 36.2}px`;
+        processSection.style.marginRight = `${containerPadding + containerMargin + 36.2}px`;
     } else {
-        servicesSection.style.marginRight = `${initialMargin}px`;
+        processSection.style.marginRight = `${initialMargin}px`;
     }
 }
 
