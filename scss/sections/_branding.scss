@@ -3,12 +3,14 @@
     position: relative;
 
     section {
-        padding-left: clamp(40px, calc(40px + 220.5621301775148 * ((100vw - 426px) / 426)), 565px);
+        position: relative;
+        z-index: 2;
+        padding-left: clamp(0px, calc(0px + 169.7278106508876 * ((100vw - 426px) / 426)), 404px);
         
         h2 {
             max-width: clamp(273px, calc(273px + 116.37278106508876 * ((100vw - 426px) / 426)), 550px);
-            line-height: clamp(56px, 6.181vw, 120px);
-            font-size: clamp(60px, 5.833vw, 120px);
+            line-height: clamp(56px, calc(56px + 10.08284023668639 * ((100vw - 426px) / 426)), 80px);
+            font-size: clamp(60px, calc(60px + 10.08284023668639 * ((100vw - 426px) / 426)), 84px);
             margin-bottom: clamp(25px, calc(25px + 4.621301775147929 * ((100vw - 426px) / 426)), 36px);
         }
 

@@ -10,6 +10,10 @@
     padding: 0 clamp(40px, calc(40px + 52.514792899408285 * ((100vw - 426px) / 426)), 165px);
 }
 
+.dg-container-1 {
+    padding: 0 clamp(40px, calc(40px + 52.514792899408285 * ((100vw - 426px) / 426)), 165px);
+}
+
 .dg-container-2 {
     padding: 0 clamp(40px, calc(40px + 52.514792899408285 * ((100vw - 426px) / 426)), 165px);
 }
@@ -30,9 +34,18 @@
     padding: 0 clamp(40px, calc(40px + 52.514792899408285 * ((100vw - 426px) / 426)), 165px);
 }
 
+.dg-container-7 {
+    padding: 0 clamp(40px, calc(40px + 52.514792899408285 * ((100vw - 426px) / 426)), 165px);
+}
+
+.dg-container-8 {
+    padding: 0 clamp(40px, calc(40px + 52.514792899408285 * ((100vw - 426px) / 426)), 165px);
+}
+
 div[class^="dg-container"] {
     margin: 0 auto;
     max-width: 1920px;
+    // background-color: rgba(magenta, 0.3);
 }
 
 .dg-section-dark {

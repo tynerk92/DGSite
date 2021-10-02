@@ -1,9 +1,14 @@
 .dg-services {
-    padding: 
-        60px 
-        clamp(45px, calc(45px + 16.80473372781065 * ((100vw - 426px) / 426)), 85px)
-        0
-    ;
+    .dg-container-2 {
+        position: relative;
+    }
+
+    .dg-section-dark {
+        padding: 60px 0;
+        width: 100vw; // Make sure it goes off the screen no matter what
+        position: static;
+        margin-left: clamp(-36px, calc(0px - 15.124260355029586 * ((100vw - 426px) / 426)), 0px);
+    }
 
     h3 {
         font-family: "DM Serif Text", serif;
@@ -18,18 +23,20 @@
         line-height: 25px;
         letter-spacing: 0.72px;
         opacity: 0.76;
+        margin: 0;
     }
 
-    .dg-content-wrapper {
+    .dg-wrapper {
         display: grid;
         grid-template-columns: repeat(3, minmax(200px, 1fr));
-        padding-bottom: 60px;
         column-gap: 60px;
+        width: 100%;
+        padding-left: clamp(46px, calc(46px + 16.384615384615387 * ((100vw - 426px) / 426)), 85px);
 
         .dg-button-wrap {
             position: absolute;
             bottom: 0;
-            right: clamp(23px, calc(23px + 7.1420118343195265 * ((100vw - 426px) / 426)), 40px);
+            right: clamp(68.5px, calc(68.5px + 56.08579881656805 * ((100vw - 426px) / 426)), 202px);
             transform: translateY(50%);
         }
 

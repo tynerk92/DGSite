@@ -3,15 +3,15 @@
     padding-top: 167px;
     padding-bottom: clamp(32px, calc(32px + 34.8698224852071 * ((100vw - 426px) / 426)), 115px);
 
-    section {
-        padding-left: clamp(40px, calc(40px + 216.1765 * ((100vw - 420px) / 420)), 565px);
-        max-width: calc(clamp(40px, calc(40px + 216.1765 * ((100vw - 420px) / 420)), 565px) + calc(324px + 105.41176 * ((100vw - 420px) / 420)));
+    .dg-wrapper {
+        margin-left: clamp(0px, calc(0px + 188.63313609467457 * ((100vw - 426px) / 426)), 449px);
+        max-width: clamp(330px, calc(330px + 113.4319526627219 * ((100vw - 426px) / 426)), 600px);
     }
 
     h2 {
         margin-bottom: 2rem;
-        line-height: clamp(56px, 6.181vw, 120px);
-        font-size: clamp(60px, 5.833vw, 120px);
+        line-height: clamp(56px, calc(56px + 10.08284023668639 * ((100vw - 426px) / 426)), 80px);
+        font-size: clamp(60px, calc(60px + 10.08284023668639 * ((100vw - 426px) / 426)), 84px);
     }
 
     p {
