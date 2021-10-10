@@ -1,11 +1,10 @@
 .dg-process {
     .dg-section-dark {
-        padding: 60px 0;
         position: absolute;
         left: 0;
         width: 100vw; // Make sure it goes off the screen no matter what
     }
-} 
+}
 
 .dg-process {
     --grid-columns: auto-fit;
