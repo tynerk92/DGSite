@@ -1,7 +1,13 @@
 .dg-process {
-    // margin-right set by javascript
-    margin-top: clamp(102px, calc(102px + 23.94674556213018 * ((100vw - 426px) / 426)), 159px);
+    .dg-section-dark {
+        padding: 60px 0;
+        position: absolute;
+        left: 0;
+        width: 100vw; // Make sure it goes off the screen no matter what
+    }
+} 
 
+.dg-process {
     --grid-columns: auto-fit;
 
     @media screen and (min-width: 1440px) {
@@ -12,7 +18,7 @@
         }
     }
 
-    .dg-content-wrapper {
+    .dg-wrapper {
         display: grid;
         grid-template-columns: repeat(var(--grid-columns, auto-fit), minmax(clamp(311px, calc(311px + 14.284023668639053 * ((100vw - 426px) / 426)), 345px), 1fr));
         margin-left: clamp(40px, calc(40px + 80.24260355029585 * ((100vw - 426px) / 426)), 231px);
@@ -20,8 +26,9 @@
         padding-top: 85px;
         padding-bottom: 85px;
         gap: 64px;
+        position: relative;
 
-        section:last-child {
+        div:last-child {
             h3 {
                 font-size: 52px;
                 line-height: 62px;
@@ -31,7 +38,7 @@
 
         .dg-section-title {
             top: 85px;
-            left: clamp(-115px, calc(-26px - 37.3905325443787 * ((100vw - 426px) / 426)), -26px);
+            left: clamp(-112px, calc(-25px - 36.55029585798817 * ((100vw - 426px) / 426)), -25px);
         }
 
         .dg-button-wrap {
@@ -45,7 +52,7 @@
     @media screen and (max-width: 1100px) {
         --grid-columns: 1;
 
-        .dg-content-wrapper {
+        .dg-wrapper {
             .dg-button-wrap {
                 bottom: 0px;
                 right: unset;

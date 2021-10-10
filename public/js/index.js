@@ -10,13 +10,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('resize', () => {
         updateServicesSectionMargin();
-        // updateProcessSectionMargin();
-
-        // TODO do this for the other dark section too
+        updateProcessSectionMargin();
     });
     updateServicesSectionMargin();
-    // updateProcessSectionMargin();
+    updateProcessSectionMargin();
 });
+
+const clamp = (num, min, max) => Math.min(Math.max(num, min), max);
 
 function updateServicesSectionMargin() {
     const containerStyle = window.getComputedStyle(document.querySelector('.dg-container'));
@@ -31,18 +31,20 @@ function updateProcessSectionMargin() {
     const containerStyle = window.getComputedStyle(document.querySelector('.dg-container'));
     const containerPadding = parseFloat(containerStyle.paddingLeft);
     const containerMargin = parseFloat(containerStyle.marginLeft);
-    const initialMargin = 40;
+    const containerWidth = parseFloat(containerStyle.width) - containerPadding * 2;
 
     const processSection = document.querySelector('.dg-process');
+    const darkSection = processSection.querySelector('.dg-section-dark');
+    
+    // at 1440px, will be -80. at 426px, will be 0
+    const offsetFromContainer = clamp(-80, 0 - 33.6094674556213 * ((window.innerWidth - 426) / 426), 0);
+    darkSection.style.width = `${containerPadding + containerMargin + containerWidth + offsetFromContainer}px`;
 
-    if (!processSection) return;
+    // Keep text anchored to the left side of the container
+    const textContainer = processSection.querySelector('.dg-wrapper');
+    textContainer.style.marginLeft = `${containerPadding + containerMargin}px`;
 
-    if (containerPadding >= initialMargin + 36.2) {
-        // 36.2 is the distance to the left of the container it should be
-        processSection.style.marginRight = `${containerPadding + containerMargin + 36.2}px`;
-    } else {
-        processSection.style.marginRight = `${initialMargin}px`;
-    }
+    processSection.style.height = `${darkSection.offsetHeight}px`;
 }
 
 /**

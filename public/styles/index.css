@@ -489,30 +489,36 @@ body.menu-open {
     .dg-portfolio .dg-portfolio-grid img {
       width: 100%; }
 
+.dg-process .dg-section-dark {
+  padding: 60px 0;
+  position: absolute;
+  left: 0;
+  width: 100vw; }
+
 .dg-process {
-  margin-top: clamp(102px, calc(102px + 23.94674556213018 * ((100vw - 426px) / 426)), 159px);
   --grid-columns: auto-fit; }
   @media screen and (min-width: 1440px) {
     .dg-process {
       --grid-columns: 2; }
       .dg-process .content-wrapper section {
         max-width: clamp(400px, calc(400px + 300 * ((100vw - 1440px) / 1440)), 500px); } }
-  .dg-process .dg-content-wrapper {
+  .dg-process .dg-wrapper {
     display: grid;
     grid-template-columns: repeat(var(--grid-columns, auto-fit), minmax(clamp(311px, calc(311px + 14.284023668639053 * ((100vw - 426px) / 426)), 345px), 1fr));
     margin-left: clamp(40px, calc(40px + 80.24260355029585 * ((100vw - 426px) / 426)), 231px);
     padding-right: 40px;
     padding-top: 85px;
     padding-bottom: 85px;
-    gap: 64px; }
-    .dg-process .dg-content-wrapper section:last-child h3 {
+    gap: 64px;
+    position: relative; }
+    .dg-process .dg-wrapper div:last-child h3 {
       font-size: 52px;
       line-height: 62px;
       max-width: 177px; }
-    .dg-process .dg-content-wrapper .dg-section-title {
+    .dg-process .dg-wrapper .dg-section-title {
       top: 85px;
-      left: clamp(-115px, calc(-26px - 37.3905325443787 * ((100vw - 426px) / 426)), -26px); }
-    .dg-process .dg-content-wrapper .dg-button-wrap {
+      left: clamp(-112px, calc(-25px - 36.55029585798817 * ((100vw - 426px) / 426)), -25px); }
+    .dg-process .dg-wrapper .dg-button-wrap {
       position: absolute;
       bottom: 207px;
       right: 0;
@@ -520,7 +526,7 @@ body.menu-open {
   @media screen and (max-width: 1100px) {
     .dg-process {
       --grid-columns: 1; }
-      .dg-process .dg-content-wrapper .dg-button-wrap {
+      .dg-process .dg-wrapper .dg-button-wrap {
         bottom: 0px;
         right: unset;
         left: clamp(0px, calc(0px + 189.61424332344214 * ((100vw - 426px) / 426)), 300px);
@@ -708,6 +714,12 @@ footer {
   padding: 0 clamp(40px, calc(40px + 52.514792899408285 * ((100vw - 426px) / 426)), 165px); }
 
 .dg-container-8 {
+  padding: 0 clamp(40px, calc(40px + 52.514792899408285 * ((100vw - 426px) / 426)), 165px); }
+
+.dg-container-9 {
+  padding: 0 clamp(40px, calc(40px + 52.514792899408285 * ((100vw - 426px) / 426)), 165px); }
+
+.dg-container-10 {
   padding: 0 clamp(40px, calc(40px + 52.514792899408285 * ((100vw - 426px) / 426)), 165px); }
 
 div[class^="dg-container"] {
